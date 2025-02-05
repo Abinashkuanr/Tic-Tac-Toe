@@ -1,0 +1,99 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Container */
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #0079b1; 
+    font-family: 'Arial', sans-serif;
+}
+
+/* Title */
+h1 {
+    margin-bottom: 20px;
+    font-size: 36px;
+    color: #121414;
+}
+
+/* Board */
+.board {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    grid-template-rows: repeat(3, 100px);
+    gap: 5px;
+    margin-bottom: 20px;
+}
+
+/* Cell */
+.cell {
+    width: 100px;
+    height: 100px;
+    background-color: #fff;
+    border: 2px solid #333;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 32px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+/* Cell Hover */
+.cell:hover {
+    background-color: #f4f4f4;
+}
+
+/* Winning Message */
+#winningMessage {
+    font-size: 24px;
+    font-weight: bold;
+    color: #1a1819;
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* Restart Button */
+#restartButton {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+/* Restart Button Hover */
+#restartButton:hover {
+    background-color: #45a049;
+}
+
+/* Mobile-Friendly */
+@media (max-width: 500px) {
+    .board {
+        grid-template-columns: repeat(3, 80px);
+        grid-template-rows: repeat(3, 80px);
+    }
+
+    h1 {
+        font-size: 28px;
+    }
+
+    #winningMessage {
+        font-size: 18px;
+    }
+
+    #restartButton {
+        font-size: 14px;
+    }
+}
