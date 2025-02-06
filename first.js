@@ -31,7 +31,7 @@ function checkWinner() {
     
 
     // Check if the clicked element has a valid index
-    const index = parseInt(element.id, 1)
+    const index = parseInt(element.id, 10)
     if (isNaN(index) || board_array[index] !== "E") {
         return; // Don't do anything if the index is invalid or the spot is already taken
     }
